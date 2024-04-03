@@ -16,10 +16,7 @@ public class Case {
 		return numCase;
 	}
 	
-	public void setCaseSpecial(char caseSpecial) {
-		this.caseSpecial = true;
-	}
-	
+
 	public boolean getCaseSpecial() {
 		return caseSpecial;
 	}

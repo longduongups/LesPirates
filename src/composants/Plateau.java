@@ -6,9 +6,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
-import affichage.JournalDeBord;
 
 import affichage.JournalDeBord;
+import caseSpeciale.CaseEffetHP;
+import caseSpeciale.CaseEffetPosition;
+import enums.Effets;
 
 public class Plateau {
 	//Déclaration du plateau de taille modifiable

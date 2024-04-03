@@ -4,7 +4,7 @@ import composants.Case;
 import composants.Pirate;
 import composants.Plateau;
 
-public interface Affichage {
+public interface IAffichage {
 	public void affStart(Pirate j1, Pirate j2);
 	public void affPlateau(Plateau plateau);
 	public void affLancerDe(int de);

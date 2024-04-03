@@ -1,4 +1,8 @@
-package composants;
+package caseSpeciale;
+
+import composants.Case;
+import composants.Pirate;
+import enums.Effets;
 
 public class CaseEffetHP extends Case{
 	Effets effet;

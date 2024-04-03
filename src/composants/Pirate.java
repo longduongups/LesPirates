@@ -1,5 +1,6 @@
 package composants;
 
+import enums.Couleur;
 
 public class Pirate {
     private String nom;
@@ -29,19 +30,9 @@ public class Pirate {
   	public String getNom() {
   		return nom;
   	}
-
-  	public void setNom(String nom) {
-  		this.nom = nom;
-  	}
-
   	public Pion getPion() {
   		return pion;
   	}
-
-  	public void setPion(Pion pion) {
-  		this.pion = pion;
-  	}
-
   	public int getPointsDeVie() {
   		return pointsDeVie;
   	}

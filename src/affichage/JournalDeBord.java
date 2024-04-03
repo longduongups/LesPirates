@@ -2,7 +2,13 @@ package affichage;
 
 import java.text.DecimalFormat;
 
-public class JournalDeBord implements Affichage{
+import caseSpeciale.CaseEffetHP;
+import caseSpeciale.CaseEffetPosition;
+import composants.Case;
+import composants.Pirate;
+import composants.Plateau;
+
+public class JournalDeBord implements IAffichage{
 	static DecimalFormat nf = new DecimalFormat("00");
 	// DÃ©claration de numCase (indice du tableau Case cases[])
 	public void affStart(Pirate j1, Pirate j2) {
@@ -149,6 +155,9 @@ public class JournalDeBord implements Affichage{
 	}
 	public void affPrison(Pirate p) {
 		System.out.println("Le pirate " + p.getNom() + " est en prison et ne peut pas se déplacer.\n");
+	}
+	public void affDepassementCase30(Pirate p) {	   
+	        System.out.println(p.getNom() + " a dépassé la case 30 !");
 	}
 
 

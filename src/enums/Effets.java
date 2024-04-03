@@ -1,4 +1,8 @@
-package composants;
+package enums;
+
+import caseSpeciale.CaseEffetHP;
+import caseSpeciale.CaseEffetPosition;
+import composants.Pirate;
 
 public enum Effets{
 	HOPITAL("Hopital"){

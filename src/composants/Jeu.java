@@ -1,8 +1,13 @@
 package composants;
 import composants.Jeu;
+import enums.Couleur;
+import enums.Effets;
+
 import java.util.Scanner;
 
 import affichage.JournalDeBord;
+import caseSpeciale.CaseEffetHP;
+import caseSpeciale.CaseEffetPosition;
 
 public class Jeu {
     //Déclaration du plateau
@@ -54,19 +59,18 @@ public class Jeu {
         de.lancerDe();
         journal.affLancerDe(de.getValeur());
 
-        int nextPos = p.getPosition() + de.getValeur() ;
+        int posSuiv = p.getPosition() + de.getValeur() ;
         //Déplacement du pion
-        if (nextPos <= 28 || nextPos == 30) {
-            p.setPosition(nextPos);
-        } else if (nextPos == 29) {
+        if (posSuiv <= 28 || posSuiv == 30) {
+            p.setPosition(posSuiv);
+        } else if (posSuiv == 29) {
             //Case espoir
             journal.affEspoir();
-        } else if (nextPos > 30) {
-            p.setPosition(30 - (nextPos - 30));
+        } else if (posSuiv > 30) {
+           journal.affDepassementCase30(p);
+           p.setPosition(30-(posSuiv-30));
         }
-
         journal.affChangePos(p);
-
         //Affectation des effets des cases spéciales
         Case case_actuelle = plateau.getCases(p.getPosition() - 1);
         if (case_actuelle.getCaseSpecial()) {
@@ -131,12 +135,5 @@ public class Jeu {
         }
     }
 
-    public static void main(String Args[]) {
-        //Initialisation des pions joueurs à 0
-        Jeu jeu = new Jeu();
-        jeu.initialiserJeu();
-
-        //Boucle exécutant le jeu
-        jeu.lancerPartie();
-    }
+   
 }
